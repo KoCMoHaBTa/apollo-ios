@@ -5,12 +5,7 @@ extension IR.Definition {
   }
 
   var isMutable: Bool {
-    switch self {
-    case  let .operation(operation):
-      return operation.definition.isLocalCacheMutation
-    case let .namedFragment(fragment):
-      return fragment.definition.isLocalCacheMutation
-    }
+    true
   }
 
   var generatedDefinitionName: String {

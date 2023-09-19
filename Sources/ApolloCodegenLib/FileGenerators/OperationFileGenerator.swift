@@ -8,11 +8,6 @@ struct OperationFileGenerator: FileGenerator {
   let config: ApolloCodegen.ConfigurationContext
   
   var template: TemplateRenderer {
-    irOperation.definition.isLocalCacheMutation ?
-    LocalCacheMutationDefinitionTemplate(
-      operation: irOperation,
-      config: config
-    ) :
     OperationDefinitionTemplate(
       operation: irOperation,
       config: config
